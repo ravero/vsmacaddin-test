@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionModel>
+    <!-- Welcome Experience -->
+    <Extension path="/MonoDevelop/Ide/StartupHandlers">
+        <Class class="Ravero.VSMacAddIn.StartupHandler" />
+    </Extension>
+    
+    <!-- Create Class Command -->
+    <Extension path="/MonoDevelop/TextEditor/ContextMenu/Editor">
+        <CommandItem id="Ravero.VSMacAddIn.Commands.CreateClass" />
+    </Extension>
+    <Extension path="/MonoDevelop/SourceEditor2/ContextMenu/Editor">
+        <CommandItem id="Ravero.VSMacAddIn.Commands.CreateClass" />
+    </Extension>
+    <Extension path="/MonoDevelop/Ide/MainMenu/Edit">
+        <CommandItem id="Ravero.VSMacAddIn.Commands.CreateClass" />
+    </Extension>
+    
+    <!-- Insert GUID Command -->
+    <Extension path="/MonoDevelop/TextEditor/ContextMenu/Editor">
+        <CommandItem id="Ravero.VSMacAddIn.Commands.InsertGuid" />
+    </Extension>
+    <Extension path="/MonoDevelop/SourceEditor2/ContextMenu/Editor">
+        <CommandItem id="Ravero.VSMacAddIn.Commands.InsertGuid" />
+    </Extension>
+    <Extension path="/MonoDevelop/Ide/MainMenu/Edit">
+        <CommandItem id="Ravero.VSMacAddIn.Commands.InsertGuid" />
+    </Extension>
+    
+    <!-- Declares Commands Handlers -->
+    <Extension path="/MonoDevelop/Ide/Commands">
+        <Command id="Ravero.VSMacAddIn.Commands.InsertGuid"
+                 _label="Insert GUID"
+                 _description="Insert a random GUID."
+                 defaultHandler="Ravero.VSMacAddIn.Commands.InsertGuidCommand" />
+        <Command id="Ravero.VSMacAddIn.Commands.CreateClass"
+                 _label="Create Class"
+                 _description="Creates a new Class and declares a variable for it."
+                 short
+                 defaultHandler="Ravero.VSMacAddIn.Commands.CreateClassCommand" />
+    </Extension>
+</ExtensionModel>
